@@ -1,5 +1,6 @@
 {
-  "name": "npm",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "mern-backend",
   "version": "1.0.0",
   "description": "mern backend",
   "keywords": [
@@ -8,14 +9,21 @@
   "license": "ISC",
   "author": "shivanshu",
   "type": "module",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "dev": "tsx watch server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "dotenv": "^18.0.5",
-    "express": "^5.2.1",
-    "nodemon": "^3.1.14"
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.30",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
   }
 }
